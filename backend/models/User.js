@@ -22,4 +22,10 @@ const UserSchema = new Schema({
   });
 
 
-module.exports = mongoose.model('user', UserSchema);
+
+  // can directly use this since unqiue email work not before it sometime didn't work
+// module.exports = mongoose.model('user', UserSchema);
+
+const User = mongoose.model('user', UserSchema);
+User.createIndexes();
+module.exports = User;
