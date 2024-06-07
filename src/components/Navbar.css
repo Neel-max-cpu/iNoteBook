@@ -1,0 +1,10 @@
+
+.navbar-light{
+    background-color: #cfcfef;
+  
+    /* background-color: blue; */
+  }
+  
+  .navbar-dark{
+    background-color: rgb(0 0 0 / 85%);
+  }
