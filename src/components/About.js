@@ -1,7 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './About.css';
+import noteContext from '../context/notes/noteContext';
 
 const About = (props) => {
+  // checking context switching ---
+  const a = useContext(noteContext);
+  useEffect(() => {
+    a.update();
+    // eslint-disable-next-line
+  },[]);
+
   const capitalizedFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
@@ -95,6 +103,9 @@ const About = (props) => {
           </div>
         </div>
       </div>
+
+      {/* context swithcing eg */}
+      This is About {a.state.name} and he is in classs {a.state.class};
     </div>
   );
 };

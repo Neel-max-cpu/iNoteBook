@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Home from './components/Home';
 import LoadingBar from 'react-top-loading-bar'
+import NoteState from './context/notes/NotesState';
 
 function App() {
 
@@ -30,23 +31,25 @@ function App() {
 
 
   return (
-    <BrowserRouter>
-      <>
-        <Navbar mode={mode} toggleMode={toggleMode}/>
-        <LoadingBar
-          key={mode}
-          color={`${mode==='light'? '#f11946' : 'yellow'}`}
-          // progress={this.state.progress}
-          progress={progress}
-          height={3}
-          // onLoaderFinished={() => setProgress(0)}
-        />
-        <Routes>
-          <Route exact path="/" element={<Home setProgress={setProgress} mode={mode}/>}></Route>
-          <Route exact path="/about" element={<About setProgress={setProgress} name='about' mode={mode}/>}></Route>
-        </Routes>
+    <>
+    <NoteState>
+      <BrowserRouter>
+          <Navbar mode={mode} toggleMode={toggleMode}/>
+          <LoadingBar
+            key={mode}
+            color={`${mode==='light'? '#f11946' : 'yellow'}`}
+            // progress={this.state.progress}
+            progress={progress}
+            height={3}
+            // onLoaderFinished={() => setProgress(0)}
+            />
+          <Routes>
+            <Route exact path="/" element={<Home setProgress={setProgress} mode={mode}/>}></Route>
+            <Route exact path="/about" element={<About setProgress={setProgress} name='about' mode={mode}/>}></Route>
+          </Routes>
+        </BrowserRouter>
+      </NoteState>
       </>
-    </BrowserRouter>
   );
 }
 
