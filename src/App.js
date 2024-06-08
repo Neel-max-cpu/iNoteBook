@@ -34,6 +34,7 @@ function App() {
       <>
         <Navbar mode={mode} toggleMode={toggleMode}/>
         <LoadingBar
+          key={mode}
           color={`${mode==='light'? '#f11946' : 'yellow'}`}
           // progress={this.state.progress}
           progress={progress}
@@ -42,7 +43,7 @@ function App() {
         />
         <Routes>
           <Route exact path="/" element={<Home setProgress={setProgress} mode={mode}/>}></Route>
-          <Route exact path="/about" element={<About setProgress={setProgress} mode={mode}/>}></Route>
+          <Route exact path="/about" element={<About setProgress={setProgress} name='about' mode={mode}/>}></Route>
         </Routes>
       </>
     </BrowserRouter>
