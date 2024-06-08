@@ -35,18 +35,18 @@ function App() {
     <NoteState>
       <BrowserRouter>
           <Navbar mode={mode} toggleMode={toggleMode}/>
-          <LoadingBar
+          {/* <LoadingBar
             key={mode}
             color={`${mode==='light'? '#f11946' : 'yellow'}`}
-            // progress={this.state.progress}
             progress={progress}
             height={3}
-            // onLoaderFinished={() => setProgress(0)}
-            />
-          <Routes>
-            <Route exact path="/" element={<Home setProgress={setProgress} mode={mode}/>}></Route>
-            <Route exact path="/about" element={<About setProgress={setProgress} name='about' mode={mode}/>}></Route>
-          </Routes>
+            /> */}
+          <div className="container">
+            <Routes>
+              <Route exact path="/" element={<Home setProgress={setProgress} mode={mode}/>}></Route>
+              <Route exact path="/about" element={<About setProgress={setProgress} name='about' mode={mode}/>}></Route>
+            </Routes>
+          </div>
         </BrowserRouter>
       </NoteState>
       </>
