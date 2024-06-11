@@ -13,7 +13,7 @@ const NoteState = (props)=>{
           "__v": 0
         },
         {
-          "_id": "666557ecf73b32468e64e4ae",
+          "_id": "666557ecf73b32e468e64e4ae",
           "user": "6660423e01264f998d2a1b88",
           "title": "hehe i know2",
           "description": "i know ok hehe2, and you can't do anything about it",
@@ -22,7 +22,7 @@ const NoteState = (props)=>{
           "__v": 0
         },
         {
-          "_id": "666557ecf73b32468e64e4ae",
+          "_id": "666557ecf73b324da68e64e4ae",
           "user": "6660423e01264f998d2a1b88",
           "title": "hehe i know2",
           "description": "i know ok hehe2, and you can't do anything about it",
@@ -31,7 +31,7 @@ const NoteState = (props)=>{
           "__v": 0
         },
         {
-          "_id": "666557ecf73b32468e64e4ae",
+          "_id": "666557ecf73b32468e64de4ae",
           "user": "6660423e01264f998d2a1b88",
           "title": "hehe i know2",
           "description": "i know ok hehe2, and you can't do anything about it",
@@ -40,7 +40,7 @@ const NoteState = (props)=>{
           "__v": 0
         },
         {
-          "_id": "666557ecf73b32468e64e4ae",
+          "_id": "666557ecf73b3246d8e64e4ae",
           "user": "6660423e01264f998d2a1b88",
           "title": "hehe i know2",
           "description": "i know ok hehe2, and you can't do anything about it",
@@ -49,7 +49,7 @@ const NoteState = (props)=>{
           "__v": 0
         },
         {
-          "_id": "666557ecf73b32468e64e4ae",
+          "_id": "666557ecf73b32468e64e4aea",
           "user": "6660423e01264f998d2a1b88",
           "title": "hehe i know2",
           "description": "i know ok hehe2, and you can't do anything about it",

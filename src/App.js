@@ -6,6 +6,7 @@ import About from './components/About';
 import Home from './components/Home';
 import LoadingBar from 'react-top-loading-bar'
 import NoteState from './context/notes/NotesState';
+import Alert from './components/Alert';
 
 function App() {
 
@@ -14,8 +15,8 @@ function App() {
   const [progress, setProgress] = useState(0);
 
   const applyBodyStyle = () => {
-    // document.body.style.backgroundColor = this.state.mode === 'light' ? 'white' : '#403d3d';
-    document.body.style.backgroundColor = mode === 'light' ? 'white' : '#403d3d';
+    // document.body.style.backgroundColor = mode === 'light' ? 'white' : '#403d3d';
+    document.body.style.backgroundColor = mode === 'light' ? 'white' : 'black';
     document.body.style.color = mode === 'light' ? 'rgb(0 0 0 / 85%)' : 'white';
   };
 
@@ -41,6 +42,7 @@ function App() {
             progress={progress}
             height={3}
             /> */}
+            <Alert mode={mode} message="hehe"/>
           <div className="container">
             <Routes>
               <Route exact path="/" element={<Home setProgress={setProgress} mode={mode}/>}></Route>

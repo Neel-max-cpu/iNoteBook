@@ -26,7 +26,8 @@ const About = (props) => {
     const updateStyles = (mode) => {
       setMyStyle({
         color: mode === 'dark' ? 'white' : 'rgb(0 0 0 / 85%)',
-        backgroundColor: mode === 'dark' ? 'rgb(39 36 36 / 85%)' : 'white',
+        // backgroundColor: mode === 'dark' ? 'rgb(39 36 36 / 85%)' : 'white',
+        backgroundColor: mode === 'dark' ? 'black' : 'white',
         border: '1px solid',
         borderColor: mode === 'dark' ? 'white' : 'rgb(0 0 0 / 85%)'
       });
@@ -38,7 +39,8 @@ const About = (props) => {
   const containerStyle = {
     minHeight: '100vh',
     padding: '20px',
-    backgroundColor: props.mode === 'dark' ? '#403d3d' : 'white',
+    // backgroundColor: props.mode === 'dark' ? '#403d3d' : 'white',
+    backgroundColor: props.mode === 'dark' ? 'black' : 'white',
     color: props.mode === 'dark' ? 'white' : 'rgb(0 0 0 / 85%)'
   };
 
