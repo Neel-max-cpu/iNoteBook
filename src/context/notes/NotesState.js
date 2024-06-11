@@ -20,7 +20,43 @@ const NoteState = (props)=>{
           "tag": "Personal",
           "date": "2024-06-09T07:21:16.270Z",
           "__v": 0
-        }
+        },
+        {
+          "_id": "666557ecf73b32468e64e4ae",
+          "user": "6660423e01264f998d2a1b88",
+          "title": "hehe i know2",
+          "description": "i know ok hehe2, and you can't do anything about it",
+          "tag": "Personal",
+          "date": "2024-06-09T07:21:16.270Z",
+          "__v": 0
+        },
+        {
+          "_id": "666557ecf73b32468e64e4ae",
+          "user": "6660423e01264f998d2a1b88",
+          "title": "hehe i know2",
+          "description": "i know ok hehe2, and you can't do anything about it",
+          "tag": "Personal",
+          "date": "2024-06-09T07:21:16.270Z",
+          "__v": 0
+        },
+        {
+          "_id": "666557ecf73b32468e64e4ae",
+          "user": "6660423e01264f998d2a1b88",
+          "title": "hehe i know2",
+          "description": "i know ok hehe2, and you can't do anything about it",
+          "tag": "Personal",
+          "date": "2024-06-09T07:21:16.270Z",
+          "__v": 0
+        },
+        {
+          "_id": "666557ecf73b32468e64e4ae",
+          "user": "6660423e01264f998d2a1b88",
+          "title": "hehe i know2",
+          "description": "i know ok hehe2, and you can't do anything about it",
+          "tag": "Personal",
+          "date": "2024-06-09T07:21:16.270Z",
+          "__v": 0
+        },
       ]
 
       const [notes, setNotes] = useState(notesInitial);
