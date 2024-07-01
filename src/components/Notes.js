@@ -5,7 +5,7 @@ import AddNote from './AddNote.js';
 
 const Notes = (props) => {
     const context = useContext(noteContext);
-    const { notes, addNote } = context;
+    const { notes } = context;
     return (
         <>
             <AddNote mode={props.mode}/>  
