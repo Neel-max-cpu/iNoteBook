@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import noteContext from "../context/notes/noteContext.js"
 
 const NoteItem = (props) => {
-    const { note, mode } = props;
+    const { note, mode, updateNote } = props;
     const context = useContext(noteContext);
     const { deleteNote } = context;
 
@@ -18,7 +18,7 @@ const NoteItem = (props) => {
                         <i className="fa-solid fa-trash-can mx-2" style={{ color: "red" }} onClick={()=>{deleteNote(note._id)}}></i>
 
                         {/* edit icon */}
-                        <i className="fa-solid fa-pen-to-square mx-2" style={{color : "blue"}}></i>
+                        <i className="fa-solid fa-pen-to-square mx-2" onClick={()=>{updateNote(note)}} style={{color : "blue"}}></i>
                     </div>
             </div>
         </div>
