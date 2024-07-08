@@ -23,7 +23,7 @@ const Notes = (props) => {
 
 
     const handleClick = (e) =>{        
-        console.log("updating the note...", note)
+        // console.log("updating the note...", note)
         // call the editNote funcition
         editNote(note.id, note.etitle, note.edescription, note.etag);
         refClose.current.click();
@@ -38,6 +38,8 @@ const Notes = (props) => {
         <>
             <AddNote mode={props.mode} />
 
+
+            {/* EDIT NOTE Modal */}
             {/*Button trigger modal -- but d-none(display none) */}
             <button type="button" className="btn btn-primary d-none" ref={ref} data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Launch demo modal
@@ -55,11 +57,11 @@ const Notes = (props) => {
                             <form className='my-3'>
                                 <div className="mb-3">
                                     <label htmlFor="title" className="form-label">Title</label>
-                                    <input type="text" value={note.etitle} className="form-control" id="etitle" name="etitle" aria-describedby="emailHelp" onChange={onChange} />
+                                    <input type="text" value={note.etitle} className="form-control" id="etitle" name="etitle" aria-describedby="emailHelp" onChange={onChange} minLength={5} required/>
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="description" className="form-label">Description</label>
-                                    <input type="text" value={note.edescription} className="form-control" id="edescription" name="edescription" onChange={onChange} />
+                                    <input type="text" value={note.edescription} className="form-control" id="edescription" name="edescription" onChange={onChange} minLength={5} required/>
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="tag" className="form-label">Tag</label>
@@ -69,7 +71,7 @@ const Notes = (props) => {
                         </div>
                         <div className="modal-footer">
                             <button ref={refClose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" onClick={handleClick} className="btn btn-primary">Update Note</button>
+                            <button disabled={note.etitle.length<3 || note.edescription.length<5} type="button" onClick={handleClick} className="btn btn-primary">Update Note</button>
                         </div>
                     </div>
                 </div>
@@ -77,6 +79,9 @@ const Notes = (props) => {
 
             <div className="row my-4">
                 <h2>Your Notes</h2>
+                <div className="container">
+                    {notes.length===0 && 'No Notes To Display'}
+                </div>
                 {notes.map((note) => {
                     return <NoteItem key={note._id} updateNote={updateNote} note={note} mode={props.mode} />
                 })}
