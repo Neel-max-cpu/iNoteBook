@@ -34,10 +34,10 @@ const Navbar = (props) => {
                             <Link className="btn btn-primary mx-1" to="/login" style={{background:props.mode==='dark'?'#b9ba35':'', border:props.mode==='dark'?'solid 2px #b9ba35':''}} role="button">Login</Link>
                             <Link className="btn btn-danger mx-1" to="/signup" style={{background:props.mode==='dark'?'#135ae8':'', border:props.mode==='dark'?'solid 2px #135ae8':''}} role="button">Sign Up</Link>
                         </form>
-                        <div className={`form-check form-switch text-${mode === 'light' ? 'dark' : 'light'}`}>
+                        <div className={`form-check form-switch text-${mode === 'light' ? 'dark' : 'light'} mx-1`}>
                           <input className="form-check-input" type="checkbox" role="switch" onClick={toggleMode} id="flexSwitchCheckDefault"/>
                           <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
-                            {mode === 'light' ? 'Enable Dark Mode' : 'Enable Light Mode'}
+                            {mode === 'light' ? 'Enable Dark Mode' : 'Disable Dark Mode'}
                           </label>
                         </div>
                     </div>
