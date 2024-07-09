@@ -40,8 +40,7 @@ const Login = (props) => {
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">Email address</label>
-          <input type="email" className="form-control" value={creads.email} onChange={onChange} style={{ background: props.mode === 'dark' ? '#1e1e25' : '#dfdfed', border: props.mode === 'dark' ? 'none' : 'none', color: props.mode === 'dark' ? 'white' : 'black' }} id="email" name="email" aria-describedby="emailHelp" />
-          <div id="emailHelp" className="form-text" style={{ color: props.mode === 'dark' ? 'yellow' : '' }}>We'll never share your email with anyone else.</div>
+          <input type="email" className="form-control" value={creads.email} onChange={onChange} style={{ background: props.mode === 'dark' ? '#1e1e25' : '#dfdfed', border: props.mode === 'dark' ? 'none' : 'none', color: props.mode === 'dark' ? 'white' : 'black' }} id="email" name="email" aria-describedby="emailHelp"/>
         </div>
         <div className="mb-3">
           <label htmlFor="password" className="form-label">Password</label>
