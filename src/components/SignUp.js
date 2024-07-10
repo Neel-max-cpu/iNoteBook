@@ -29,9 +29,11 @@ const SignUp = (props) => {
       // save the auth token and redirect
       localStorage.setItem('token', json.authtoken);
       navigate("/login");
+      props.showAlert("Account Created Successfully", "success")
     }
     else{
-      alert("Either the user alread exits or creds are invalid");
+      props.showAlert("Either the user already exits or credentials are invalid", "warning")
+      // alert("Either the user already exits or creds are invalid");
     }
    
   }
@@ -41,7 +43,7 @@ const SignUp = (props) => {
   }
 
   return (
-    <div>
+    <div className='container my-4'>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name</label>

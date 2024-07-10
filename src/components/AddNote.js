@@ -13,6 +13,7 @@ const AddNote = (props) => {
         addNote(note.title, note.description, note.tag);
         // after submitting clear all the inputs
         setNote({ title: "", description: "", tag: "" });
+        props.showAlert("Note Added Successfully", "success");
     }
 
     // ... spread operator

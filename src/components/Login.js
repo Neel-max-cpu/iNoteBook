@@ -25,9 +25,11 @@ const Login = (props) => {
       // save the auth token and redirect
       localStorage.setItem('token', json.authtoken);
       navigate("/");
+      props.showAlert("Logged In Successfully", "success");
     }
     else{
-      alert("invalid creds");
+      props.showAlert("Invalid Credentials", "warning");
+      // alert("invalid creds");
     }
   }
 
@@ -36,7 +38,7 @@ const Login = (props) => {
   }
 
   return (
-    <div>
+    <div className='container my-4'>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">Email address</label>

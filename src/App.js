@@ -16,6 +16,21 @@ function App() {
   // for loading bar --
   const [progress, setProgress] = useState(0);
 
+  // alert
+  const [alert, setAlert] = useState(null);
+  
+  const showAlert = (message, type)=>{
+    setAlert({
+      // can give same name or different name
+      msg : message,
+      type : type
+    })
+
+    setTimeout(() =>{
+      setAlert(null);
+    }, 1500);
+  }
+
   const applyBodyStyle = () => {
     // document.body.style.backgroundColor = mode === 'light' ? 'white' : '#403d3d';
     document.body.style.backgroundColor = mode === 'light' ? 'white' : 'black';
@@ -44,13 +59,13 @@ function App() {
             progress={progress}
             height={3}
             /> */}
-            <Alert mode={mode} message="hehe"/>
+          <Alert alert={alert}/>
           <div className="container">
             <Routes>
-              <Route exact path="/" element={<Home setProgress={setProgress} mode={mode}/>}></Route>
+              <Route exact path="/" element={<Home showAlert={showAlert} setProgress={setProgress} mode={mode}/>}></Route>
               <Route exact path="/about" element={<About setProgress={setProgress} name='about' mode={mode}/>}></Route>
-              <Route exact path="/login" element={<Login setProgress={setProgress} mode={mode}/>}></Route>
-              <Route exact path="/signup" element={<SignUp setProgress={setProgress} mode={mode}/>}></Route>
+              <Route exact path="/login" element={<Login showAlert={showAlert} setProgress={setProgress} mode={mode}/>}></Route>
+              <Route exact path="/signup" element={<SignUp showAlert={showAlert} setProgress={setProgress} mode={mode}/>}></Route>
             </Routes>
           </div>
         </BrowserRouter>

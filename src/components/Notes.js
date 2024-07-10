@@ -27,6 +27,7 @@ const Notes = (props) => {
         // call the editNote funcition
         editNote(note.id, note.etitle, note.edescription, note.etag);
         refClose.current.click();
+        props.showAlert("Updated Successfully", "success");
     }
 
     // ... spread operator
@@ -36,7 +37,7 @@ const Notes = (props) => {
 
     return (
         <>
-            <AddNote mode={props.mode} />
+            <AddNote showAlert={props.showAlert} mode={props.mode} />
 
 
             {/* EDIT NOTE Modal */}
@@ -49,22 +50,22 @@ const Notes = (props) => {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h1 className="modal-title fs-5" id="exampleModalLabel">Edit Note</h1>
+                            <h1 className="modal-title fs-5" id="exampleModalLabel" style={{color:'black'}} >Edit Note</h1>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
                             {/* form like Add Note--------- */}
                             <form className='my-3'>
                                 <div className="mb-3">
-                                    <label htmlFor="title" className="form-label">Title</label>
+                                    <label htmlFor="title" className="form-label" style={{color:'black'}}>Title</label>
                                     <input type="text" value={note.etitle} className="form-control" id="etitle" name="etitle" aria-describedby="emailHelp" onChange={onChange} minLength={5} required/>
                                 </div>
                                 <div className="mb-3">
-                                    <label htmlFor="description" className="form-label">Description</label>
+                                    <label htmlFor="description" className="form-label" style={{color:'black'}}>Description</label>
                                     <input type="text" value={note.edescription} className="form-control" id="edescription" name="edescription" onChange={onChange} minLength={5} required/>
                                 </div>
                                 <div className="mb-3">
-                                    <label htmlFor="tag" className="form-label">Tag</label>
+                                    <label htmlFor="tag" className="form-label" style={{color:'black'}}>Tag</label>
                                     <input type="text" value={note.etag} className="form-control" id="etag" name="etag" onChange={onChange} />
                                 </div>
                             </form>
@@ -83,7 +84,7 @@ const Notes = (props) => {
                     {notes.length===0 && 'No Notes To Display'}
                 </div>
                 {notes.map((note) => {
-                    return <NoteItem key={note._id} updateNote={updateNote} note={note} mode={props.mode} />
+                    return <NoteItem key={note._id} updateNote={updateNote} note={note} showAlert={props.showAlert} mode={props.mode} />
                 })}
             </div>
         </>

@@ -15,7 +15,7 @@ const NoteItem = (props) => {
                         <p className="card-text"style={{color:mode==="dark"? "#f7f733":"#5c5858", fontFamily:'cursive'}}>{note.tag}</p>                
                         
                         {/* delete icon */}
-                        <i className="fa-solid fa-trash-can mx-2" style={{ color: "red" }} onClick={()=>{deleteNote(note._id)}}></i>
+                        <i className="fa-solid fa-trash-can mx-2" style={{ color: "red" }} onClick={()=>{deleteNote(note._id); props.showAlert("Deleted Successfully", "success");}}></i>
 
                         {/* edit icon */}
                         <i className="fa-solid fa-pen-to-square mx-2" onClick={()=>{updateNote(note)}} style={{color : "blue"}}></i>

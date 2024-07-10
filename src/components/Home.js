@@ -4,10 +4,11 @@ import Notes from './Notes.js';
 
 
 const Home = (props) => {
+  const {showAlert} = props;
 
   return (
     <div className='custom'>    
-      <Notes mode={props.mode}/>
+      <Notes showAlert={showAlert} mode={props.mode}/>
 
       {/* <div className="container my-4">
         <h2>Add a Note</h2>
