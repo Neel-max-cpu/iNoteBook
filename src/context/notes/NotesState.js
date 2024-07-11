@@ -16,7 +16,8 @@ const NoteState = (props) => {
     const response = await fetch(`${host}/api/notes/fetchallnotes`, {
       method: 'GET',
       headers: {
-        'auth-token' : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY2MDQyM2UwMTI2NGY5OThkMmExYjg4In0sImlhdCI6MTcxNzY1MTYwMX0.gbzjTvsiRzM70zTW8vAGXXHxiFy25qnu21-wm12MzZY'
+        'Content-Type': 'application/json',
+        'auth-token' : localStorage.getItem('token')
       },
     });
     const json = await response.json();
@@ -33,7 +34,7 @@ const NoteState = (props) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'auth-token' : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY2MDQyM2UwMTI2NGY5OThkMmExYjg4In0sImlhdCI6MTcxNzY1MTYwMX0.gbzjTvsiRzM70zTW8vAGXXHxiFy25qnu21-wm12MzZY'
+        'auth-token' : localStorage.getItem('token')
       },
       body: JSON.stringify({title, description, tag})
     });
@@ -49,11 +50,11 @@ const NoteState = (props) => {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
-        'auth-token' : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY2MDQyM2UwMTI2NGY5OThkMmExYjg4In0sImlhdCI6MTcxNzY1MTYwMX0.gbzjTvsiRzM70zTW8vAGXXHxiFy25qnu21-wm12MzZY'
+        'auth-token' : localStorage.getItem('token')
       },
     });
     const json = await response.json();
-    // console.log(json);
+    console.log(json);
 
     // console.log("deleted with id" + id)
     const newNotes = notes.filter((note) => { return note._id !== id })
@@ -68,12 +69,12 @@ const NoteState = (props) => {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        'auth-token' : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY2MDQyM2UwMTI2NGY5OThkMmExYjg4In0sImlhdCI6MTcxNzY1MTYwMX0.gbzjTvsiRzM70zTW8vAGXXHxiFy25qnu21-wm12MzZY'
+        'auth-token' : localStorage.getItem('token')
       },
       body: JSON.stringify({title, description, tag})
     });
     const json = await response.json();
-    // console.log(json);
+    console.log(json);
 
   // logic to edit in client side
   for (let index = 0; index < notes.length; index++) {

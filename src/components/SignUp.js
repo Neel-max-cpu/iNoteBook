@@ -1,17 +1,17 @@
-import React, {useState} from 'react'
-import {useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = (props) => {
-  const [creads, setCreads] = useState({name:"", email:"", password:"", cpassword:""});
+  const [creads, setCreads] = useState({ name: "", email: "", password: "", cpassword: "" });
   let navigate = useNavigate();
-  
+
   const handleSubmit = async (e) => {
     // to avoid reloading
     e.preventDefault();
-    const {name, email, password, cpassword} = creads;
-    
+    const { name, email, password, cpassword } = creads;
+
     // check if passwords match or not
-    if(password !== cpassword){
+    if (password !== cpassword) {
       alert("password doesn't match");
       return;
     }
@@ -21,21 +21,21 @@ const SignUp = (props) => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({name, email, password})
+      body: JSON.stringify({ name, email, password })
     });
     const json = await response.json();
     console.log(json);
-    if(json.success){
+    if (json.success) {
       // save the auth token and redirect
       localStorage.setItem('token', json.authtoken);
       navigate("/login");
       props.showAlert("Account Created Successfully", "success")
     }
-    else{
+    else {
       props.showAlert("Either the user already exits or credentials are invalid", "warning")
       // alert("Either the user already exits or creds are invalid");
     }
-   
+
   }
 
   const onChange = (e) => {
@@ -43,7 +43,8 @@ const SignUp = (props) => {
   }
 
   return (
-    <div className='container my-4'>
+    <div className='container mt-4'>
+      <h2 className='my-3'>Create an account to use iNoteBook</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name</label>
@@ -57,7 +58,7 @@ const SignUp = (props) => {
         </div>
         <div className="mb-3">
           <label htmlFor="password" className="form-label">Password</label>
-          <input type="password" className="form-control" style={{ background: props.mode === 'dark' ? '#1e1e25' : '#dfdfed', border: props.mode === 'dark' ? 'none' : 'none', color: props.mode === 'dark' ? 'white' : 'black' }} id="password"name="password" onChange={onChange} minLength={5} required />
+          <input type="password" className="form-control" style={{ background: props.mode === 'dark' ? '#1e1e25' : '#dfdfed', border: props.mode === 'dark' ? 'none' : 'none', color: props.mode === 'dark' ? 'white' : 'black' }} id="password" name="password" onChange={onChange} minLength={5} required />
           <div id="emailHelp" className="form-text" style={{ color: props.mode === 'dark' ? 'yellow' : '' }}>Password should be min of 5 characters</div>
         </div>
         <div className="mb-3">
@@ -66,8 +67,6 @@ const SignUp = (props) => {
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
-
-      
     </div>
   )
 }
