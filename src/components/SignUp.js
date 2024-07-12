@@ -49,7 +49,7 @@ const SignUp = (props) => {
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name</label>
           <input type="text" className="form-control" style={{ background: props.mode === 'dark' ? '#1e1e25' : '#dfdfed', border: props.mode === 'dark' ? 'none' : 'none', color: props.mode === 'dark' ? 'white' : 'black' }} id="name" name="name" onChange={onChange} minLength={3} required aria-describedby="emailHelp" />
-          <div id="emailHelp" className="form-text" style={{ color: props.mode === 'dark' ? 'yellow' : '' }}>Name should be min of 3 characters</div>
+          <div id="emailHelp" className="form-text" style={{ color: props.mode === 'dark' ? 'yellow' : '' }}>*Name should be minimum of 3 characters</div>
         </div>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">Email address</label>
@@ -59,7 +59,7 @@ const SignUp = (props) => {
         <div className="mb-3">
           <label htmlFor="password" className="form-label">Password</label>
           <input type="password" className="form-control" style={{ background: props.mode === 'dark' ? '#1e1e25' : '#dfdfed', border: props.mode === 'dark' ? 'none' : 'none', color: props.mode === 'dark' ? 'white' : 'black' }} id="password" name="password" onChange={onChange} minLength={5} required />
-          <div id="emailHelp" className="form-text" style={{ color: props.mode === 'dark' ? 'yellow' : '' }}>Password should be min of 5 characters</div>
+          <div id="emailHelp" className="form-text" style={{ color: props.mode === 'dark' ? 'yellow' : '' }}>*Password should be minimum of 5 characters</div>
         </div>
         <div className="mb-3">
           <label htmlFor="cpassword" className="form-label">Confirm Password</label>

@@ -36,6 +36,14 @@ const About = (props) => {
     updateStyles(props.mode);
   }, [props.mode]);
 
+  const insideStyle ={
+    color: props.mode === 'dark' ? 'yellow' : '#212529bf',
+    // backgroundColor: mode === 'dark' ? 'rgb(39 36 36 / 85%)' : 'white',
+    backgroundColor: props.mode === 'dark' ? 'black' : 'white',
+    border: '1px solid',
+    borderColor: props.mode === 'dark' ? 'white' : 'rgb(0 0 0 / 85%)'
+  }
+
   const containerStyle = {
     minHeight: '100vh',
     padding: '20px',
@@ -55,7 +63,8 @@ const About = (props) => {
             </button>
           </h2>
           <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-            <div className="accordion-body" style={myStyle}>
+            {/* <div className="accordion-body" style={{myStyle}>  */}
+            <div className="accordion-body" style={insideStyle}> 
               iNotebook offers a cloud-based solution to keep all your notes organized and accessible from anywhere. Whether you are at home or on the go, your notes are just a click away.
             </div>
           </div>
@@ -67,7 +76,8 @@ const About = (props) => {
             </button>
           </h2>
           <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div className="accordion-body" style={myStyle}>
+            {/* <div className="accordion-body" style={myStyle}> */}
+            <div className="accordion-body" style={insideStyle}>
               With iNotebook, you can create an account for free, and securely save your notes. Access your notes anytime by logging into your account from any device.
             </div>
           </div>
@@ -79,7 +89,8 @@ const About = (props) => {
             </button>
           </h2>
           <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div className="accordion-body" style={myStyle}>
+            {/* <div className="accordion-body" style={myStyle}> */}
+            <div className="accordion-body" style={insideStyle}>
               iNotebook allows you to organize your notes with tags, making it easy to find what you need when you need it. Categorize your notes by topic, project, or any way that suits your workflow.
             </div>
           </div>
@@ -91,7 +102,8 @@ const About = (props) => {
             </button>
           </h2>
           <div id="collapseFour" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div className="accordion-body" style={myStyle}>
+            {/* <div className="accordion-body" style={myStyle}> */}
+            <div className="accordion-body" style={insideStyle}>
               This app is a full <strong>MERN</strong> Stack application, made by <strong>Neel Bhattacharya</strong>. It is built using React, with the help of YouTube tutorials, ReactJS documentation, and other resources. Enjoy using iNotebook!
               🎉🥳
             </div>

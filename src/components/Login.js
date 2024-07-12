@@ -49,7 +49,7 @@ const Login = (props) => {
           <label htmlFor="password" className="form-label">Password</label>
           <input type="password" className="form-control" value={creads.password} onChange={onChange} style={{ background: props.mode === 'dark' ? '#1e1e25' : '#dfdfed', border: props.mode === 'dark' ? 'none' : 'none', color: props.mode === 'dark' ? 'white' : 'black' }} id="password" name="password" />
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-primary">Log in</button>
       </form>
     </div>
   )
