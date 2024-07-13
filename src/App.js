@@ -8,6 +8,7 @@ import LoadingBar from 'react-top-loading-bar'
 import NoteState from './context/notes/NotesState';
 import Alert from './components/Alert';
 import SignUp from './components/SignUp';
+import ForgotPass from './components/ForgotPass';
 import Login from './components/Login';
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
               <Route exact path="/about" element={<About setProgress={setProgress} name='about' mode={mode}/>}></Route>
               <Route exact path="/login" element={<Login showAlert={showAlert} setProgress={setProgress} mode={mode}/>}></Route>
               <Route exact path="/signup" element={<SignUp showAlert={showAlert} setProgress={setProgress} mode={mode}/>}></Route>
+              <Route exact path="/forgetpass" element={<ForgotPass mode={mode}/>}></Route>
             </Routes>
           </div>
         </BrowserRouter>

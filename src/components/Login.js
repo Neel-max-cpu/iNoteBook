@@ -37,6 +37,12 @@ const Login = (props) => {
     setCreads({ ...creads, [e.target.name]: e.target.value })
   }
 
+
+  // if forget password navigate to forget password
+  const onNav = ()=>{
+    navigate("/forgetpass");
+  }
+
   return (
     <div className='mt-4'>
       <h2 className='my-3'>Login to continue to iNoteBook</h2>
@@ -50,6 +56,7 @@ const Login = (props) => {
           <input type="password" className="form-control" value={creads.password} onChange={onChange} style={{ background: props.mode === 'dark' ? '#1e1e25' : '#dfdfed', border: props.mode === 'dark' ? 'none' : 'none', color: props.mode === 'dark' ? 'white' : 'black' }} id="password" name="password" />
         </div>
         <button type="submit" className="btn btn-primary">Log in</button>
+        <button type="submit" className="btn btn-danger mx-3" onClick={onNav}>Forgot Password</button>
       </form>
     </div>
   )
