@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const SignUp = (props) => {
   const [creads, setCreads] = useState({ name: "", email: "", password: "", cpassword: "" });
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState(null);
   let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -13,7 +14,8 @@ const SignUp = (props) => {
 
     // check if passwords match or not
     if (password !== cpassword) {
-      alert("password doesn't match");
+      setError("Passwords do not match");
+      setTimeout(() => setError(null), 1500);
       return;
     }
 
@@ -74,6 +76,7 @@ const SignUp = (props) => {
         <div className='my-3'>
           <button type="button" className="btn btn-primary" onClick={togglePasswordVisibility}>{showPassword ? "Hide 🫣" : "Show 👁️"}</button>
         </div>
+        {error && <div className="alert alert-danger">{error}</div>}
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
     </div>
