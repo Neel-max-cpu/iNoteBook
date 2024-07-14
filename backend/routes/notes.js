@@ -96,6 +96,17 @@ router.delete('/deletenote/:id', fetchuser, async (req, res)=>{
     }
 });
 
+// ROUTE 5: Get the number of notes for a user: GET "/api/notes/count". Requires authentication
+router.get('/count', fetchuser, async (req, res) => {
+    try {
+        const count = await Note.countDocuments({ user: req.user.id });
+        res.json({ count });
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
 
 
 module.exports = router;

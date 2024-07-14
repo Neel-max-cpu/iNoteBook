@@ -11,13 +11,13 @@ const NoteState = (props) => {
   // Remember when api calls are done, we have to use cors to give api requests
 
   // Get all Notes  
-  const getNotes = async () => {    
+  const getNotes = async () => {
     // api calls ---- 
     const response = await fetch(`${host}/api/notes/fetchallnotes`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'auth-token' : localStorage.getItem('token')
+        'auth-token': localStorage.getItem('token')
       },
     });
     const json = await response.json();
@@ -28,15 +28,15 @@ const NoteState = (props) => {
 
 
   // Add a Note
-  const addNote = async (title, description, tag) => {    
+  const addNote = async (title, description, tag) => {
     // api calls ---- 
     const response = await fetch(`${host}/api/notes/addnote`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'auth-token' : localStorage.getItem('token')
+        'auth-token': localStorage.getItem('token')
       },
-      body: JSON.stringify({title, description, tag})
+      body: JSON.stringify({ title, description, tag })
     });
 
     const note = await response.json();
@@ -50,7 +50,7 @@ const NoteState = (props) => {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
-        'auth-token' : localStorage.getItem('token')
+        'auth-token': localStorage.getItem('token')
       },
     });
     const json = await response.json();
@@ -69,32 +69,34 @@ const NoteState = (props) => {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        'auth-token' : localStorage.getItem('token')
+        'auth-token': localStorage.getItem('token')
       },
-      body: JSON.stringify({title, description, tag})
+      body: JSON.stringify({ title, description, tag })
     });
     const json = await response.json();
     console.log(json);
 
-  // logic to edit in client side
-  for (let index = 0; index < notes.length; index++) {
-    const element = notes[index];
-    if (element._id === id) {
-      notes[index].title = title;
-      notes[index].description = description;
-      notes[index].tag = tag;
+    // creating a deep copy
+    let newNotes = JSON.parse(JSON.stringify(notes))
+    // logic to edit in client side
+    for (let index = 0; index < newNotes.length; index++) {
+      const element = newNotes[index];
+      if (element._id === id) {
+        newNotes[index].title = title;
+        newNotes[index].description = description;
+        newNotes[index].tag = tag;
+        break;
+      }
     }
-    break;
+    setNotes(newNotes);
   }
-  setNotes(notes);
-}
 
 
-return (
-  <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote, getNotes}}>
-    {props.children}
-  </NoteContext.Provider>
-)
+  return (
+    <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote, getNotes }}>
+      {props.children}
+    </NoteContext.Provider>
+  )
 }
 
 export default NoteState;
