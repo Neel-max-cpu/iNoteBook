@@ -7,6 +7,8 @@ connectToMongo();
 const app = express()
 const port = 5000
 
+// app.use(cors());
+
 // write to so that it doesn't give error while sending request
 // CORS configuration is important
 // const corsOptions = {
@@ -20,9 +22,9 @@ const port = 5000
 // app.use(cors(corsOptions));
 app.use(cors(
   {
-    origin: ['https://i-note-book-frontend-five.vercel.app'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    // allowedHeaders: ['Content-Type', 'Authorization'],
+    origin: ["https://i-note-book-frontend-five.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
   } 
 ));
