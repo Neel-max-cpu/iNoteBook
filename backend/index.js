@@ -24,9 +24,9 @@ app.use(cors(
   {
     origin: ["https://i-note-book-frontend-five.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'auth-token'],
     credentials: true,
-    optionsSuccessStatus: 200 
+    optionsSuccessStatus: 200,
   } 
 ));
 
