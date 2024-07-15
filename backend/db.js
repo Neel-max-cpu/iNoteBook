@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 // for local -- testing 
 const mongoURI = "mongodb://localhost:27017/inotebook"
 
-// for deployment ----
 // const mongoURI = "mongodb+srv://neelbhatta22:iNotebookpass@inotebook.56ofnwa.mongodb.net/"
 
 async function connectToMongo() {

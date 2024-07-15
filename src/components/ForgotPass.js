@@ -34,7 +34,7 @@ const ForgotPass = (props) => {
             const response = await fetch("http://localhost:5000/api/auth/forgot", {
             
             // for connecting to vercel 
-            // const response = await fetch("https://i-note-book-backend-blue.vercel.app//api/auth/forgot", {
+            // const response = await fetch("https://i-note-book-backend-sand.vercel.app/api/auth/forgot", {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
