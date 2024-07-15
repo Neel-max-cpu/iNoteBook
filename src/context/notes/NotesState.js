@@ -2,7 +2,12 @@ import NoteContext from './noteContext';
 import { useState } from 'react';
 
 const NoteState = (props) => {
-  const host = "http://localhost:5000"
+  // for local host ---
+  // const host = "http://localhost:5000"
+
+  // for vercel connection --
+  const host = "http://i-note-book-backend-sand.vercel.app"
+  
   const notesInitial = []
 
   const [notes, setNotes] = useState(notesInitial);

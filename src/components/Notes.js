@@ -61,8 +61,12 @@ const Notes = (props) => {
 
     // count the number of notes
     const fetchNoteCount = async () => {
-        try {
-            const response = await fetch("http://localhost:5000/api/notes/count", {
+        try {  
+            // for local host 
+            // const response = await fetch("http://localhost:5000/api/notes/count", {
+
+            // for connecting to vercel
+            const response = await fetch("http://i-note-book-backend-sand.vercel.app/api/notes/count", {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

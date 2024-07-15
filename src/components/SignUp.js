@@ -19,7 +19,11 @@ const SignUp = (props) => {
       return;
     }
 
-    const response = await fetch("http://localhost:5000/api/auth/createuser", {
+    // for local host---
+    // const response = await fetch("http://localhost:5000/api/auth/createuser", {
+
+    // for connecting to vercel ---
+    const response = await fetch("http://i-note-book-backend-sand.vercel.app/api/auth/createuser", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

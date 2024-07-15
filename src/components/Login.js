@@ -13,7 +13,12 @@ const Login = (props) => {
   const handleSubmit = async (e) => {
     // to avoid reloading
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/login", {
+
+    // for local host
+    // const response = await fetch("http://localhost:5000/api/auth/login", {
+
+    // for vercel
+    const response = await fetch("http://i-note-book-backend-sand.vercel.app/api/auth/login", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
