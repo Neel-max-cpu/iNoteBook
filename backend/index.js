@@ -9,18 +9,26 @@ const port = 5000
 
 // write to so that it doesn't give error while sending request
 // CORS configuration is important
-const corsOptions = {
-  origin: ['https://i-note-book-frontend-five.vercel.app'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
-};
+// const corsOptions = {
+//   origin: ['https://i-note-book-frontend-five.vercel.app'],
+//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+//   credentials: true,
+// };
 
 // Use CORS middleware with options
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors(
+  {
+    origin: ['https://i-note-book-frontend-five.vercel.app'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    // allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  } 
+));
 
 // Explicitly handle preflight requests
-app.options('*', cors(corsOptions));
+// app.options('*', cors(corsOptions));
 
 app.use(express.json())
 // Available routes
