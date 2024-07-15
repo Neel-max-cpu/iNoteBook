@@ -1,27 +1,12 @@
 {
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "https://i-note-book-backend-sand.vercel.app/api/$1"
-    }
+  "version":2,
+  "builds":[
+    {"src":"*.js", "use":"@vercel/node"}
   ],
-  "headers": [
+  "routes":[
     {
-      "source": "/api/(.*)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "https://i-note-book-frontend-five.vercel.app"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, PUT, DELETE"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type"
-        }
-      ]
+      "src":"/(.*)",
+      "dest":"/"
     }
   ]
 }
