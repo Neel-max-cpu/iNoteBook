@@ -12,13 +12,13 @@ app.use(cors());
 
 // write to so that it doesn't give error while sending request
 // CORS options
-// const corsOptions = {
-//   origin: ['https://i-note-book-frontend-ashen.vercel.app/login'], // Your frontend domain
-//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-//   allowedHeaders: ['Content-Type', 'Authorization', 'auth-token'],
-//   credentials: true, // Allow credentials (cookies, authorization headers, TLS client certificates)
-//   optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
-// };
+const corsOptions = {
+  origin: 'https://i-note-book-frontend-five.vercel.app', // Your frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'auth-token'],
+  credentials: true, // Allow credentials (cookies, authorization headers, TLS client certificates)
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+};
 
 // Use CORS middleware with options
 // app.use(cors(corsOptions));
