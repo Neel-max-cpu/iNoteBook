@@ -31,10 +31,10 @@ const ForgotPass = (props) => {
         // Code to change the password in the database can go here
         try {
             // for local host/directly connecting to mongo db using local host
-            // const response = await fetch("http://localhost:5000/api/auth/forgot", {
+            const response = await fetch("http://localhost:5000/api/auth/forgot", {
             
             // for connecting to vercel 
-            const response = await fetch("https://i-note-book-backend-blue.vercel.app//api/auth/forgot", {
+            // const response = await fetch("https://i-note-book-backend-blue.vercel.app//api/auth/forgot", {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

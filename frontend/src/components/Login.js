@@ -15,10 +15,10 @@ const Login = (props) => {
     e.preventDefault();
 
     // for local host
-    // const response = await fetch("http://localhost:5000/api/auth/login", {
+    const response = await fetch("http://localhost:5000/api/auth/login", {
 
     // for vercel
-    const response = await fetch("https://i-note-book-backend-blue.vercel.app/api/auth/login", {
+    // const response = await fetch("https://i-note-book-backend-blue.vercel.app/api/auth/login", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

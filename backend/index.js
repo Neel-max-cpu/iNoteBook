@@ -8,7 +8,7 @@ connectToMongo();
 const app = express()
 const port = 5000
 
-// app.use(cors());
+app.use(cors());
 
 // write to so that it doesn't give error while sending request
 // CORS options
@@ -38,9 +38,9 @@ const port = 5000
 
 
 // use the custom cors this time ---
-app.use(allowCors((req, res, next) => {
-  next();
-}));
+// app.use(allowCors((req, res, next) => {
+//   next();
+// }));
 
 
 app.use(express.json())
