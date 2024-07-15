@@ -10,7 +10,7 @@ const port = 5000
 // write to so that it doesn't give error while sending request
 // CORS configuration is important
 const corsOptions = {
-  origin: 'https://i-note-book-frontend-five.vercel.app',
+  origin: ['https://i-note-book-frontend-five.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
