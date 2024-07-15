@@ -6,8 +6,8 @@ const NoteState = (props) => {
   // const host = "http://localhost:5000"
 
   // for vercel connection --
-  const host = "http://i-note-book-backend-sand.vercel.app"
-  
+  const host = "https://i-note-book-backend-sand.vercel.app"
+
   const notesInitial = []
 
   const [notes, setNotes] = useState(notesInitial);
