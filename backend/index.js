@@ -8,11 +8,19 @@ const app = express()
 const port = 5000
 
 // write to so that it doesn't give error while sending request
-app.use(cors({
+// CORS configuration is important
+const corsOptions = {
   origin: 'https://i-note-book-frontend-five.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
-}));
+};
+
+// Use CORS middleware with options
+app.use(cors(corsOptions));
+
+// Explicitly handle preflight requests
+app.options('*', cors(corsOptions));
 
 app.use(express.json())
 // Available routes
