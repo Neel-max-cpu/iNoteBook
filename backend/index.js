@@ -39,7 +39,7 @@ app.options('*', cors(corsOptions));
 app.use(express.json())
 
 app.get("/", (req, res) => {
-  res.json({ data: "hello" })
+  res.json("hello")
 })
 
 // Available routes
