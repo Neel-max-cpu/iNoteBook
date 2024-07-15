@@ -8,7 +8,10 @@ const ForgotPass = (props) => {
     const [creds, setCreds] = useState({ email: "", password: "", cpassword: "" });
     const [error, setError] = useState(null);
     const [showPassword, setShowPassword] = useState(false);
+    
+    // eslint-disable-next-line
     const [message, setMessage] = useState(null);
+    
     const [success, setSuccess] = useState(null);
     let navigate = useNavigate();
 
