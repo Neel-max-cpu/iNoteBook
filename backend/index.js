@@ -31,6 +31,11 @@ app.use(cors(
 // app.options('*', cors(corsOptions));
 
 app.use(express.json())
+
+app.get("/", (req, res) => {
+  res.json({ data: "hello" })
+})
+
 // Available routes
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/notes', require('./routes/notes'))
