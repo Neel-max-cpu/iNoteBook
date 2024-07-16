@@ -1,19 +1,10 @@
 {
   "version": 2,
+  "name": "backend-db",
   "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
-    }
+     { "src": "app.js", "use": "@vercel/node" }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
+     { "src": "/(.*)", "dest": "/app.js" }
   ]
 }
