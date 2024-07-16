@@ -18,7 +18,7 @@ const Login = (props) => {
     // const response = await fetch("http://localhost:5000/api/auth/login", {
 
     // for vercel
-    const response = await fetch("https://i-note-book-backend-eight.vercel.app/auth/login", {
+    const response = await fetch("https://i-note-book-backend-eight.vercel.app/api/auth/login", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
