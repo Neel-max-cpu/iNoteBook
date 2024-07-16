@@ -1,5 +1,7 @@
+// eslint-disable-next-line
 import React, { useState, useEffect, useContext } from 'react';
 import './About.css';
+// eslint-disable-next-line
 import noteContext from '../context/notes/noteContext';
 
 const About = (props) => {
