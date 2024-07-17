@@ -1,12 +1,64 @@
-# Getting Started with Create React App
+# iNoteBook :tada:
+
+## Live Demo here  -> [Link](https://i-note-book-frontend-zeta.vercel.app/login) ⭐
+
+### Images of the App 
+
+### Home Page
+![Image 1](https://github.com/Neel-max-cpu/iNoteBook/blob/main/public/images/home.png?raw=true)
+### Home Page - Dark
+![Image 2](https://github.com/Neel-max-cpu/iNoteBook/blob/main/public/images/home_dark.png?raw=true)
+### Home Page - With Notes
+![Image 3](https://github.com/Neel-max-cpu/iNoteBook/blob/main/public/images/home_notes.png?raw=true)
+### Home Page - Edit Note Modal
+![Image 4](https://github.com/Neel-max-cpu/iNoteBook/blob/main/public/images/edit_modal.png?raw=true)
+### Sign Up Page
+![Image 5](https://github.com/Neel-max-cpu/iNoteBook/blob/main/public/images/signup.png?raw=true)
+### Login Page
+![Image 6](https://github.com/Neel-max-cpu/iNoteBook/blob/main/public/images/login.png?raw=true)
+### Forgot Password
+![Image 7](https://github.com/Neel-max-cpu/iNoteBook/blob/main/public/images/forgot_pass.png?raw=true)
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## NewsZap
+iNotebook is a secure, efficient and on the cloud note-taking application built with the MERN (MongoDB, Express, React, Node.js) stack. It allows users to manage their personal and professional notes with ease. iNotebook features user authentication for privacy, enabling users to create, read, update, and delete notes. Each note can be tagged, ensuring organized storage of information. The application also supports real-time updates, ensuring users always have access to their latest notes. Designed with a user-friendly interface, iNotebook offers a seamless experience across desktop and mobile platforms, making note management convenient and accessible anytime, anywhere.
+
+
+### Key Features
+* User Authentication: Secure login and registration to protect personal notes.
+* CRUD Operations: Create, read, update, and delete notes easily.
+* Real-Time Updates: Instant synchronization across devices.
+* Responsive Design: Optimized for both desktop and mobile devices.
+* Intuitive Interface: User-friendly design for a seamless note-taking experience.
+* Data Security: Ensures the confidentiality and integrity of user data.
+* Cross-Platform Compatibility: Access notes from any device, anywhere.
+
+### Technologies Used
+* React: Frontend library for building user interfaces.
+* Express: Web framework for Node.js to build the backend and HTTP requests.
+* Node.js: JavaScript runtime for server-side development.
+* MongoDB Atlas: Cloud-based database service for data storage.
+* Mongoose: ODM (Object Data Modeling) library for MongoDB and Node.js.
+* JWT (JSON Web Token): For secure authentication.
+* Bcrypt: For password hashing.
+* Bootstrap: For styling and responsive design.
+* Thunder Client: For API testing during development.
+* CORS: Middleware for enabling Cross-Origin Resource Sharing.
+* Vercel: Platform for deploying frontend and backend applications.
+
+
+## Getting Started with Create React App
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory and in the backend folder, you can run:
+### `npm i`
+To download the dependencies of frontend and backend
 
-### `npm start`
+Then ### `npm run both` in the root directory to run the application
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -68,3 +120,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+😃
