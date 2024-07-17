@@ -57,7 +57,9 @@ In the project directory and in the backend folder, you can run:
 ### `npm i`
 To download the dependencies of frontend and backend
 
-Then ### `npm run both` in the root directory to run the application
+
+### `npm run both` 
+in the root directory to run the application
 
 
 Runs the app in the development mode.\
