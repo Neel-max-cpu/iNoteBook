@@ -23,7 +23,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## NewsZap
+## iNotebook
 iNotebook is a secure, efficient and on the cloud note-taking application built with the MERN (MongoDB, Express, React, Node.js) stack. It allows users to manage their personal and professional notes with ease. iNotebook features user authentication for privacy, enabling users to create, read, update, and delete notes. Each note can be tagged, ensuring organized storage of information. The application also supports real-time updates, ensuring users always have access to their latest notes. Designed with a user-friendly interface, iNotebook offers a seamless experience across desktop and mobile platforms, making note management convenient and accessible anytime, anywhere.
 
 
