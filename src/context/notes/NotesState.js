@@ -3,10 +3,10 @@ import { useState } from 'react';
 
 const NoteState = (props) => {
   // for local host ---
-  const host = "http://localhost:5000"
+  // const host = "http://localhost:5000"
 
   // for vercel connection --
-  // const host = "https://i-note-book-backend-eight.vercel.app"
+  const host = "https://i-note-book-backend-eight.vercel.app"
 
   const notesInitial = []
 
