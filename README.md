@@ -2,6 +2,8 @@
 
 ## Live Demo here  -> [Link](https://i-note-book-frontend-zeta.vercel.app/login) ⭐
 
+## Working of the App Video -> [Link](https://youtu.be/JrdLiybrJMI)✨
+
 ### Images of the App 
 
 ### Home Page
